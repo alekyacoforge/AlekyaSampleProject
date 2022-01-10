@@ -1,0 +1,23 @@
+<template>
+    <lightning-card
+      title="View Details"
+      icon-name="standard:account"
+      class="slds-p-around_small"
+    >
+      <p
+        class="slds-p-around_small slds-text-heading_medium slds-text-title_bold"
+      >
+        Click on the button to see details in Modal
+      </p>
+      <lightning-button
+        class="slds-m-around_small"
+        variant="brand"
+        onclick={handleModalOpen}
+        label="View"
+      >
+      </lightning-button>
+      <template if:true={isModalOpen}>
+        <c-modal-container acc-info={account}></c-modal-container>
+      </template>
+    </lightning-card>
+  </template>

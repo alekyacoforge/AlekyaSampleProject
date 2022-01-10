@@ -1,0 +1,20 @@
+<template>
+    <div class="slds-card slds-p-around_medium">
+      <label class="slds-item_label">Title </label>
+      <input class="slds-input" onchange={handleChange} name="title" />
+      <label class="slds-item_label">Message </label>
+      <input class="slds-input" onchange={handleChange} name="message" />
+      <lightning-combobox
+        name="variant"
+        label="Variant"
+        value={variant}
+        options={options}
+        onchange={handleChange}
+      ></lightning-combobox>
+      <lightning-button
+        variant="brand"
+        label="Generate"
+        onclick={handleToast}
+      ></lightning-button>
+    </div>
+  </template>

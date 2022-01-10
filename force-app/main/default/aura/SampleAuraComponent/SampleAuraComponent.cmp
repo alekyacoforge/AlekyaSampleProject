@@ -1,0 +1,8 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,lightning:isUrlAddressable"
+  access="global"
+>
+  <lightning:card title="Aura Component For Navigation">
+    <p class="slds-m-around_medium">This is a custom aura component</p>
+  </lightning:card>
+</aura:component>

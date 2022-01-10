@@ -1,0 +1,31 @@
+<template>
+    <lightning-card>
+
+        <div class="slds-var-m-around_small slds-box slds-box_small" >
+            <div class="slds-text-heading_medium">Random Text</div>
+            <p>{randomText}</p>
+            <button class="slds-button slds-button_brand slds-var-m-top_small" onclick={handleChangeText}>Change text</button>
+        </div>
+        
+        <div class="slds-var-m-around_small slds-box slds-box_small">
+            <div class="slds-text-heading_medium">Random Text Array</div>
+            <template for:each={randomTextArray} for:item="randomText">
+                <li key={index}>{randomText}</li>
+            </template>
+            <button class="slds-button slds-button_brand slds-var-m-top_small" onclick={handleChangeArray}>Change Array</button>
+        </div>
+        
+        <div class="slds-var-m-around_small slds-box slds-box_small">
+            <div class="slds-text-heading_medium">Object with @track</div>
+            <p>{justATrackedObject.text}</p>
+            <button class="slds-button slds-button_brand slds-var-m-top_small" onclick={handleTrackedObjectChange}>Change Object Text property</button>
+        </div>
+
+        <div class="slds-var-m-around_small slds-box slds-box_small">
+            <div class="slds-text-heading_medium">Object without @track</div>
+            <p>{justAnObject.text}</p>
+            <button class="slds-button slds-button_brand slds-var-m-top_small" onclick={handleObjectChange}>Change Object Text property</button>
+        </div>
+
+    </lightning-card>
+</template>

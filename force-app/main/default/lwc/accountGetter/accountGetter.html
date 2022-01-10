@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Account Getter(Parent)" icon-name="standard:account">
+      <div class="slds-grid slds-wrap slds-p-around_small">
+        <template for:each={listOfAccs} for:item="acc">
+          <div class="slds-size_1-of-3" key={acc.Id}>
+            <c-account-printer
+              acc-info={acc}
+              print-id={handlePrint}
+            ></c-account-printer>
+          </div>
+        </template>
+      </div>
+    </lightning-card>
+  </template>

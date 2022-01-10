@@ -1,0 +1,38 @@
+<template>
+    <lightning-card
+      title="Editing a record using Record Edit Form"
+      icon-name="standard:contact"
+    >
+      <lightning-record-edit-form
+        record-id={recordId}
+        object-api-name="Contact"
+        onsuccess={handleSuccess}
+      >
+        <div class="slds-grid slds-m-around_small">
+          <div class="slds-col slds-size_1-of-2">
+            <lightning-input-field field-name="FirstName">
+            </lightning-input-field>
+            <lightning-input-field field-name="LastName"></lightning-input-field>
+          </div>
+          <div class="slds-col slds-size_1-of-2">
+            <lightning-input-field field-name="Phone"> </lightning-input-field>
+            <lightning-input-field field-name="Email"></lightning-input-field>
+          </div>
+        </div>
+        <div class="slds-m-around_medium">
+          <lightning-button
+            variant="outline"
+            label="Reset Fields"
+            class="slds-m-right_medium"
+            onclick={resetForm}
+          >
+          </lightning-button>
+          <lightning-button
+            type="submit"
+            variant="brand"
+            label="Save"
+          ></lightning-button>
+        </div>
+      </lightning-record-edit-form>
+    </lightning-card>
+  </template>

@@ -1,0 +1,19 @@
+<template>
+    <div class="slds-card slds-p-around_medium">
+<p>{randomText}</p>
+<button class="slds-button slds-button_brand" onclick={handleTextChange}>
+    Change
+</button>
+<ul>
+<template for:each={technologies} for:item="technology" key={index}>
+
+<li key={index}>{technology}</li>
+</template>
+</ul>
+<button class="slds-button slds-button_brand" onclick={handleArrayChange}>
+
+Alter Array
+
+</button>
+    </div>
+</template>

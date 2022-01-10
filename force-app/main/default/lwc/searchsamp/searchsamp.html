@@ -1,0 +1,28 @@
+<template>
+    <div class="demo-only demo-only--sizing slds-grid ">
+        <div class="slds-size_2-of-2">
+            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                <lightning-input type="text" label="Last Name" id="lName" name="lName" onchange={lastNameValue}
+                value={lName} class="slds-p-around_x-small"  >
+            </lightning-input>
+
+            </div>
+          </div>
+        <div class="slds-size_1-of-2">
+          <div class="slds-box slds-box_x-small slds-m-around_x-small">
+            <lightning-input type="number" label="PostalCode"
+            field-level-help="Please enter postcode atleast 6digits" id="pCode" name="pCode"
+            onchange={postalCodeValue} class="slds-p-around_x-small" value={pCode}></lightning-input>
+          </div>
+        </div>
+        *AND/OR
+        <div class="slds-size_1-of-2">
+          <div class="slds-box slds-box_x-small  slds-m-around_x-small">
+            <lightning-input type="date" label="Date of Birth"
+            field-level-help="Please enter MMDDYYYY Format" id="bDate" name="bDate"
+            value={bdate} onchange={dateOfBirthValue} class="slds-p-around_x-small"  >
+        </lightning-input>
+          </div>
+        </div> 
+        </div>
+</template>

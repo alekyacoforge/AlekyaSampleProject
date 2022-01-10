@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Events Example">
+    <template if:true={accounts.data}>
+        <template for:each={accounts.data} for:item="acc">
+            <tr key={acc.Id}>
+                <td><lightning-input type="checkbox"  data-record-id={acc.Id} onchange={addAccs}></lightning-input></td>
+         <td>  <button class="slds-button slds-text-link_reset slds-text-color_success"  data-record-id={acc.Id} onclick={handleCLick}>{acc.Name}</button>  </td> 
+        <td>   <p key={acc.Id}>{acc.Phone}</p></td> 
+            </tr>
+        </template>
+    </template>
+    <template if:true={accounts.error}>
+        {accounts.error}
+    </template>
+    <br>
+    <lightning-button onclick={navigateTo} label="Open Related Contacts"></lightning-button>
+</lightning-card>
+
+
+    <c-child-comp onsendphonenumber={updateNumb}></c-child-comp>
+
+</template>

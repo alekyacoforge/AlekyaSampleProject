@@ -1,0 +1,35 @@
+<template>
+    <lightning-card>
+        
+    
+ 
+        <div class="slds-m-bottom--medium">
+            <c-child-contact onmyeventdemo={handleChangeAction}></c-child-contact>
+        </div>
+ 
+                 
+        
+         
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered" border="1" cellspacing="0" cellpadding="0" bordercolor="#ccc" style="border-collapse:collapse;">
+           <thead>
+               <tr>
+                   <th>First Name</th>
+                   <th>Last Name</th>
+                   <th>Email</th>
+                   <th>Phone</th>
+               </tr>
+           </thead> 
+            <template for:each={records} for:item='conItem'>
+                <tr key={conItem.Id}>
+                    <td>{conItem.FirstName}</td>
+                    <td>{conItem.LastName}</td>
+                    <td>{conItem.Email}</td>
+                    <td>{conItem.Phone}</td>
+                </tr>
+            </template>
+        </table>
+ 
+        
+    </lightning-card>
+   
+</template>

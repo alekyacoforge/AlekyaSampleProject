@@ -1,0 +1,25 @@
+<template>
+  <div class="slds-card slds-p-around_medium">
+<button class="slds-button slds-button_brand slds-m-top_medium" onclick={handleText}>click
+</button>
+<template if:true={isShown}>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Department</th>
+        <th>Age</th>
+    </tr>
+
+    <template for:each={arrays} for:item="emp" key={id}>
+      <tr key={emp.id}>
+      <td key={emp.id}>{emp.id}</td>
+      <td key={emp.id}>{emp.name}</td>
+      <td key={emp.id}>{emp.department}</td>
+      <td key={emp.id}>{emp.age}</td>
+      </tr>
+  </template>
+    </table>
+</template>
+  </div>
+</template>

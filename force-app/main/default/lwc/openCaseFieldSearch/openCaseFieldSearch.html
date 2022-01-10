@@ -1,0 +1,53 @@
+<template>
+    <div class="slds-card">
+    <lightning-card  variant="Narrow" >
+    <lightning-input type="text" label="Application Number" id="ApplicationNumber" name="ApplicationNumber" onchange={ApplicationNumberValue}
+					value={ApplicationNumberValue} >
+				</lightning-input>
+
+                <lightning-button label="Search" variant="destructive" style="margin-right:16px"
+								onclick={handleSearch} class="slds-float_right">
+							</lightning-button>
+         </lightning-card>
+
+         
+    </div>
+</template>
+
+
+
+<!-- // this[NavigationMixin.Navigate](config);
+
+
+//    this[NavigationMixin.Navigate]({
+//         type: 'standard__webPage', 
+//         attributes: { url: '/lightning/n/SearchComp/'+recordId +'/view?ws='+encodeURIComponent(window.location.SearchComp) }, });
+
+//  this[NavigationMixin.Navigate]({
+//             type: 'standard__recordPage', 
+//          attributes: { url: '/lightning/n/SearchComp/'+recordId +'/view?ws='+encodeURIComponent(window.location.SearchComp) }, });
+
+this[NavigationMixin.Navigate]({ type: 'standard__webPage', attributes: { url: '/lightning/r/Contact/'+recordId +'/view?ws='+encodeURIComponent(window.location.pathname) }, });
+
+// });} -->
+
+
+
+
+
+
+<!-- openLightningTab() {
+
+  console.log( 'Inside the Open Tab' );
+  this[NavigationMixin.Navigate]({
+      type: 'standard__navItemPage',
+      attributes: {
+          apiName: 'Sample_LWC'
+      },
+      state: {
+          c__strInput: 'testing',
+          c__recId: this.recordId
+      }
+  });
+
+} -->

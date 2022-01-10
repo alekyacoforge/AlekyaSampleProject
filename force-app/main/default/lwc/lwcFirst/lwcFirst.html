@@ -1,0 +1,35 @@
+<template>
+    <div class="slds-card slds-p-around_medium">
+      <!--h1 class="header">First LWC Reference</h1>
+      <p>This is rendered conditionally</p>
+      <label class="slds-form-element__label">Name</label>
+      <input
+        type="text"
+        class="slds-input name"
+        onkeyup={trackChange}
+        name="name"
+      />
+      <label class="slds-form-element__label">Age</label>
+      <input
+        type="text"
+        class="slds-input age"
+        onkeyup={trackChange}
+        name="age"
+      />
+      <label class="slds-form-element__label origin">Origin</label>
+      <input type="text" class="slds-input" onkeyup={trackChange} name="origin" /-->
+      <button
+        class="slds-button slds-button_brand slds-m-top_medium"
+        onclick={handleText}
+      >
+        Click
+      </button>
+      <template if:true={isShown}>
+        <ul>
+          <template for:each={arrayOfText} for:item="text" key={index}>
+            <li key={index}>{text}</li>
+          </template>
+        </ul>
+      </template>
+    </div>
+  </template>

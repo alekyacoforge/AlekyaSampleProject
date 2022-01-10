@@ -1,0 +1,27 @@
+<!-- <template>
+    <p>This is example LWC component for Solution #1</p>
+    <p>
+        <lightning-button  title="Open Account" label="Open Account" onclick={onOpenAccountClick}></lightning-button>
+    </p>
+ </template> -->
+ <!-- <template>
+    <lightning-card>
+        <div class="slds-p-around_medium">
+            <p>This is example LWC component for Solution #2</p>
+            <p>
+                <lightning-button enabled={openAccountButtonDisabled} title="Open Account" label="Open Account" onclick={onOpenAccountClick}></lightning-button>
+            </p>
+        </div>
+    </lightning-card>
+ </template> -->
+ <template>
+    <lightning-card>
+    <lightning-input type="text" label="Application Number" id="ApplicationNumber" name="ApplicationNumber" onchange={ApplicationNumberValue}
+					value={ApplicationNumberValue} >
+				</lightning-input>
+
+                <lightning-button label="Search" variant="destructive" style="margin-right:16px"
+								onclick={handleSearch} class="slds-float_right">
+							</lightning-button>
+         </lightning-card>
+</template>

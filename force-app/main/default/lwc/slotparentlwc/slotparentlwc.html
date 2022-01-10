@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="Using Slots Implementation">
+        <div class="slds-var-m-around_medium">
+            <div class="slds-grid">
+                <div class="slds-col">
+                    <c-slotchildlwc>
+                        <h1 slot="header-name" class="slds-text-heading_large">Lionel Messi</h1><br/>
+                        <span slot="contact-type">Website</span>
+                        <span slot="contact-info">Www.example.com</span>
+                        <p>This is a slot with name for Lionel</p>
+                        <br/>
+                        <h3 slot="footer-name">Slot 1 </h3>
+
+                    </c-slotchildlwc>
+                </div>
+
+                <div class="slds-col">
+                    <c-slotchildlwc>
+                        <h1 slot="header-name" class="slds-text-heading_large">Cars</h1><br/>
+                        <span slot="contact-type">Website</span>
+                        <span slot="contact-info">Www.example.com</span>
+                        <p>This is a slot with name for Cars</p><br/>
+                        <h3 slot="footer-name">Slot 2</h3>
+
+                    </c-slotchildlwc>
+                </div>
+
+                <div class="slds-col">
+                    <c-slotchildlwc>
+                        <h1 slot="header-name" class="slds-text-heading_large">Messi</h1><br/>
+                        <span slot="contact-type">Website</span>
+                        <span slot="contact-info">Www.example.com</span>
+                        <p>This is a slot with name for Messi</p><br/>
+                        <h3 slot="footer-name">Slot 3 </h3>
+
+                    </c-slotchildlwc>
+                </div>
+        </div>
+        </div>
+    </lightning-card>
+</template>

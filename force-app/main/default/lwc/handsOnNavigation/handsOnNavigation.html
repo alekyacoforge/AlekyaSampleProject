@@ -1,0 +1,78 @@
+<template>
+    <lightning-card title='Selection Based Navigations' icon-name="custom:custom69">
+        <lightning-layout multiple-rows="true" vertical-align='end'>
+ 
+            <lightning-layout-item class='slds-p-around_small'>
+                <lightning-input
+                    label="sObject Name"
+                    value={sObjectValue}
+                    onchange={handlesObjectValue}
+                    name='sObjectInput'
+                    >
+                </lightning-input>
+            </lightning-layout-item>
+ 
+            <lightning-layout-item class='slds-p-around_small'>
+                <lightning-combobox
+                    name="mode"
+                    label="Mode"
+                    value={modeValue}
+                    placeholder="Select a mode"
+                    options={optionsMode}
+                    onchange={handleOptionChange} >
+                </lightning-combobox>
+            </lightning-layout-item>
+ 
+            <template if:true={isModeEditOrView}>
+                <lightning-layout-item class='slds-p-around_small'>
+                    <lightning-input
+                        label="Record Id"
+                        value={sObjectRecordIdValue}
+                        onchange={handlesObjectRecordIdValue}
+                        name='sObjectRecordIdInput'
+                        >
+                    </lightning-input>
+                </lightning-layout-item>
+            </template>
+ 
+            <template if:true={isModeListView}>
+                <lightning-layout-item class='slds-p-around_small'>
+                    <lightning-input
+                        label="List View Name"
+                        value={sObjectlistViewIdValue}
+                        onchange={handlesObjectListViewIdValue}
+                        name='sObjectListViewIdInput'
+                        >
+                    </lightning-input>
+                </lightning-layout-item>
+            </template>
+ 
+            <template if:true={isMOdeRelatedList}>
+                <lightning-layout-item class='slds-p-around_small'>
+                    <lightning-input
+                        label="Relationship Name"
+                        value={sObjectRelationshipValue}
+                        onchange={handlesRelationshipValue}
+                        name='sObjectRecordIdInput'
+                        >
+                    </lightning-input>
+                </lightning-layout-item>
+            </template>
+ 
+            <lightning-layout-item class='slds-p-around_small'>
+                <lightning-button
+                    label="Navigate"
+                    onclick={handleNavigation}
+                    variant="brand"
+                >
+                </lightning-button>
+            </lightning-layout-item>
+ 
+        </lightning-layout>
+ 
+        <template if:true={navError}>
+            <p class='slds-m-around_medium slds-text-heading_small' style="color:red;"> Please check for your conditions properly!</p>
+        </template>
+        
+    </lightning-card>
+ </template>

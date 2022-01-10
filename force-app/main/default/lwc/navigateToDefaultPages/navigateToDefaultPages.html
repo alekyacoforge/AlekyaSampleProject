@@ -1,0 +1,28 @@
+<template>
+  <lightning-card title="Navigate to Default Pages" icon-name="custom:custom30">
+    <lightning-button
+      class="slds-m-around_medium"
+      label="Navigate to Chatter"
+      onclick={navigateToChatter}
+      variant="brand"
+    ></lightning-button>
+    <lightning-button
+      class="slds-m-around_medium"
+      label="Navigate to Files"
+      onclick={navigateToFiles}
+      variant="success"
+    ></lightning-button>
+    <lightning-button
+      class="slds-m-around_medium"
+      label="Navigate to Reports"
+      onclick={navigateToReports}
+      variant="destructive"
+    ></lightning-button>
+    <lightning-button
+      class="slds-m-around_medium"
+      label="Navigate to Google"
+      onclick={navigateToGoogle}
+      variant="outline"
+    ></lightning-button>
+  </lightning-card>
+</template>

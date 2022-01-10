@@ -1,0 +1,48 @@
+<template>
+    <div class="slds-card slds-p-around_medium">
+    <h1 class="header">First Lwc Project</h1>
+    <p>this is rendered condtionally</p>
+    <label class="slds-form-element__label">Change</label>
+    <input type="text" class="slds-input" onkeyup={trackChange} />
+    <button class="slds-button slds-button_brand slds-m-top_medium"
+    onclick={handleText}> Click
+    </button>
+    <template if:true={isShown}>
+    <p class="slds-m-top_medium"> {randomText} </p>
+</template>
+</div>
+</template>
+
+<!--<template>
+    <div class="slds-card slds-p-around_medium">
+<p class="slds-p-around_small output-text"> Click on the button to show</p>
+<button class="
+slds button slds-button-brand
+slds-p-around_x-small
+slds-m-bottom_small
+ctrl-btn
+" onclick={handleShowTable}>
+Show Table
+</button>
+<template if:true={showTable}>
+    <div>
+        <table class="slds-table slds-table_bordered">
+            <thead>
+                <th scope="col">Name</th>
+                <th scope="col">Department</th>
+                <th scope="col">Age</th>
+            </thead>
+            <tbody>
+                <template for:each={trainees} for:item="trainee">
+                    <tr key={trainee.id}>
+                        <td>{trainee.name}</td>
+                        <td>{trainee.dept}</td>
+                        <td>{trainee.age}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div>
+</template>
+</div>
+</template>-->

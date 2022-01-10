@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Grand Parent Preview" icon-name="custom:custom12">
+      <p class="slds-p-around_small">Click to open Preview</p>
+      <lightning-button
+        class="slds-m-around_small"
+        variant="brand"
+        label="Show Preview"
+        onclick={handleOpenPreview}
+      >
+      </lightning-button>
+      <template if:true={isPreviewOpened}>
+        <c-preview-parent
+          onclosepreview={handleClosePreview}
+          onclosebothmycomps={handleCloseBoth}
+        ></c-preview-parent>
+      </template>
+    </lightning-card>
+  </template>

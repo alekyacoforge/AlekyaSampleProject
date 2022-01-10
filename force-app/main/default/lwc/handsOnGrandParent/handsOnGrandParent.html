@@ -1,0 +1,6 @@
+<template>
+    <lightning-card title="Passing values from Child to GP" icon-name="custom:custom69">
+        <p class="slds-p-around_medium">Value received from Grand Child: {inputText}</p>
+        <c-hands-on-parent oninputtext={handleEventFromGC}></c-hands-on-parent>
+    </lightning-card>
+</template>

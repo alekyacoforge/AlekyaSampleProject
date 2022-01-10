@@ -1,0 +1,13 @@
+<template>
+    
+    <lightning-card title="Related Contacts List">
+        <template if:true={conList}>
+            <lightning-datatable data={conList} columns={columns} key-field="Id">
+            </lightning-datatable>
+        </template>
+        <template if:true={error}>
+            <p>in error</p>
+            {error}
+        </template>
+    </lightning-card>
+</template>

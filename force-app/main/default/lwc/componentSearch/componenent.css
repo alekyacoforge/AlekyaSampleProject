@@ -1,0 +1,7 @@
+/*adjusting help text position*/
+
+.icon{
+    float: right;
+    position: relative;
+    margin-left: 4%; 
+}

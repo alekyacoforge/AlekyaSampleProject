@@ -1,0 +1,29 @@
+<template>
+    <template for:each={fieldObject} for:item="object" for:index="index">
+        <template if:false={object.IsPicklist}>
+        <lightning-input
+          type={object.type}
+          data-index={index}
+          data-field-api-name={object.fieldPath}
+          key={object.fieldPath}
+          label={object.label}
+          required={object.dbRequired}
+          class="slds-m-around_medium"
+          value={searchKeywords}
+          name={index}
+          onchange={buttonValidator}
+          field-level-help={object.helpcontent}
+          
+        ></lightning-input>
+        
+      </template>
+      </template>
+      <lightning-button
+      class="slds-p-bottom_small slds-float_right slds-m-right_medium"
+      label="Clear"
+      variant="Destructive"
+      onclick={handleReset}
+      
+    >
+    </lightning-button>
+</template>

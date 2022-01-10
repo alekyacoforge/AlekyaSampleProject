@@ -1,0 +1,20 @@
+<template>
+  <lightning-card
+    title="Working with Record UI API"
+    icon-name="standard:contact"
+  >
+    <div class="slds-m-around_medium">
+      <template if:true={contactRec.data}>
+        <p>
+          <lightning-formatted-text value={name}></lightning-formatted-text>
+        </p>
+        <p>
+          <lightning-formatted-phone value={phone}></lightning-formatted-phone>
+        </p>
+        <p>
+          <lightning-formatted-email value={email}></lightning-formatted-email>
+        </p>
+      </template>
+    </div>
+  </lightning-card>
+</template>

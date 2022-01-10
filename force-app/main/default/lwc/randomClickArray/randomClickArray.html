@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-card slds-p-around_medium">
+        <h1 class="header">First Lwc Project</h1> 
+        <p>This is renderded condition</p>
+        
+     <!--<label class="slds-form-element-label">name</label>
+         <input type="text" class="slds-input name" onkeyup={trackChange} />-->
+     <button class="slds-button slds-button_brand slds-m-top_medium"
+     onclick={handleText} > Click
+    </button>
+    <template if:true={isShown}>
+        <p class="slds-m-top_medium">i will learn {randomText}</p>
+    </template>
+        </div>
+</template>

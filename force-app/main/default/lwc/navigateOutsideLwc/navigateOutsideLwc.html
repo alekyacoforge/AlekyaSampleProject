@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Navigate Outside" icon-name="custom:custom34">
+    <lightning-button
+        class="slds-m-around_x-small"
+        variant="brand"
+        label="To VF Page"
+        onclick={navigateToVfPage}
+      >
+      </lightning-button>
+      <lightning-button
+        class="slds-m-around_x-small"
+        variant="outline"
+        label="To Aura Comp"
+        onclick={navigateToAura}
+      ></lightning-button>
+      <p class="slds-m-around_small">
+        <a href={vfUrl}>Click Here</a> 
+           to go to VF PAGE </p>
+    </lightning-card>
+</template>

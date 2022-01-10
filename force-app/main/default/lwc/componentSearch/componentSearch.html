@@ -1,0 +1,118 @@
+<template>
+	<form>
+
+		<lightning-card title="Search for customers, accounts & applications" icon-name="standard:search" >
+			<div class="icon">
+				<lightning-icon icon-name="utility:info" alternative-text="info" title="info"
+					class="slds-icon_large slds-float_right"></lightning-icon>
+			</div>
+
+			<!-- <span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed">
+				<svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-float_right" aria-hidden="false">
+				  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#announcement"></use>
+				</svg>
+				<span class="slds-assistive-text">Description of icon when needed</span>
+			  </span> -->
+			  
+			</br>
+
+			<div class="slds-p-bottom_large slds-p-left_large">
+
+				<lightning-input type="text" label="First Name" id="firstName" name="firstName"
+					onchange={firstNameValue} value={firstName} class="slds-p-around_x-small " style="margin-right:16px"></lightning-input>
+				<lightning-input type="text" label="Middle Name" id="middleName" name="middleName"
+					onchange={middleNameValue} value={middleName} class="slds-p-around_x-small" style="margin-right:16px"></lightning-input>
+				<lightning-input type="text" label="Last Name" id="lastName" name="lastName" onchange={lastNameValue}
+					value={lastName} class="slds-p-around_x-small" style="margin-right:16px">
+				</lightning-input>
+<div class="slds-grid slds-gutters">
+							<div class="slds-col">
+							<span>
+								<lightning-input type="number" label="PostalCode"
+							field-level-help="Please enter postcode atleast 6digits" id="postalCode" name="postalCode"
+							onchange={postalCodeValue} class="slds-p-around_x-small" value={postalCode}></lightning-input>
+							</span>
+							</div>
+							<div class="slds-col">
+							<span>
+								<lightning-input type="date" label="Date of Birth"
+							field-level-help="Please enter MMDDYYYY Format" id="birthDate" name="birthDate"
+							value={birthDate} onchange={dateOfBirthValue} class="slds-p-around_x-small" style="margin-right:16px">
+						</lightning-input>
+							</span>
+							</div>
+							</div>
+
+						
+
+
+
+				<lightning-input type="phone" label="Phone" field-level-help="Minimum 10digits required" name="phone"
+					onchange={phoneValue} id="phone" value={phone} class="slds-p-around_x-small" style="margin-right:16px">
+				</lightning-input>
+
+				
+				<!-- <footer role="contentinfo" class="slds-p-around_large"> -->
+					<div class="slds-border_top">
+					<lightning-card>
+						<div class="button">
+						<lightning-button label="Search" variant="destructive" style="margin-right:16px"
+							onclick={handleSearch} class= "slds-float_right"  >
+						</lightning-button>
+						<lightning-button label="Reset " variant="destructive" style="margin-right:16px"
+							onclick={handleReset} class="slds-float_right" >
+						</lightning-button>
+					</div>
+					</lightning-card>
+				
+				<!-- </footer> -->
+</div>
+			</div>
+		</lightning-card>
+
+
+	</form>
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <label class="slds-form-element__label" >Post Code</label> -->
+<!-- <lightning-helptext content="Please enter postcode" class="customIcon"></lightning-helptext> -->
+<!-- <lightning-card>
+	<lightning-button class="slds-m-around_small" label='Clear' variant='Destructive' >
+	</lightning-button>
+	<lightning-button class="slds-m-around_small" label='Search' variant='Destructive' >
+	</lightning-button>
+</lightning-card> -->
+
+<!-- <div>
+							Some text here
+							<lightning-helptext content="I am incorrectly aligned"></lightning-helptext>
+						</div> -->
+<!--   <fieldset class="slds-form-element slds-form-element_compound">           
+				 <div class="slds-form-element__control">         
+					 <div class="slds-form-element__row">           
+						 <div class="slds-size_2-of-6">              
+							<div class="slds-form-element">               
+								 <label class="slds-form-element__label" for="input-01">Post Code</label> 
+								               <div class="slds-form-element__control">                 
+									 <input type="text" id="input-01" class="slds-input" />              
+								  </div>              </div>            </div>           
+								 <div class="slds-size_2-of-6">             
+									 <div class="slds-form-element">              
+										  <label class="slds-form-element__label" for="input-02">Birth Date</label> 
+										               <div class="slds-form-element__control">         
+											         <input type="text" id="input-02" class="slds-input" />   
+										             </div>              </div>            </div>          </div> 
+									       </div>      </fieldset>
+			 -->

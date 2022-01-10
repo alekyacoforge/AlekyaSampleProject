@@ -1,0 +1,11 @@
+<template>
+    <lightning-card>
+    <lightning-input type="text" label="Application Number" id="ApplicationNumber" name="ApplicationNumber" onchange={ApplicationNumberValue}
+					value={ApplicationNumberValue} >
+				</lightning-input>
+
+                <lightning-button label="Search" variant="destructive" style="margin-right:16px"
+								onclick={handleSearch} class="slds-float_right">
+							</lightning-button>
+         </lightning-card>
+</template>

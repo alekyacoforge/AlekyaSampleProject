@@ -1,0 +1,35 @@
+<template>
+  <lightning-card title="Call Child Method" icon-name="standard:opportunity">
+    <template if:false={fetched}>
+      <lightning-button
+        class="slds-p-around_medium"
+        variant="brand"
+        icon-name="utility:search"
+        label="Fetch"
+        onclick={fetchData}
+      ></lightning-button>
+    </template>
+    <template if:true={fetched}>
+      <p class="slds-p-around_medium slds-text-heading_medium">
+        Click on the button to delete all listed Opportunities
+      </p>
+      <lightning-button
+        class="slds-p-around_medium"
+        variant="destructive"
+        icon-name="utility:search"
+        label="Delete All"
+        onclick={deleteAll}
+      ></lightning-button>
+      <div class="slds-grid slds-p-around_medium">
+        <template for:each={listOfOpps} for:item="opp">
+          <div class="slds-size_1-of-2 slds-p-around_medium" key={opp.Id}>
+            <c-call-child-method-demo-child
+              opp-info={opp}
+              ondeleterecord={refreshPage}
+            ></c-call-child-method-demo-child>
+          </div>
+        </template>
+      </div>
+    </template>
+  </lightning-card>
+</template>

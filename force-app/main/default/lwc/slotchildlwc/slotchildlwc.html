@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <div class="slds-var-m-around_x-medium slds-box contact-card-blue slds-box_small">
+            <slot name="header-name"></slot>
+            <p class="slds-var-m-vertical_x-small">Contact Info
+                <br/>
+                <slot name="contact-type"></slot>
+                <slot name="contact-info"></slot>
+            </p>
+            <slot></slot>
+            <h3>
+                <slot name="footer-name" class="slds=align_absolute-center slds-text-text-heading_medium"></slot>
+            </h3>
+        </div>
+    </lightning-card>
+</template>

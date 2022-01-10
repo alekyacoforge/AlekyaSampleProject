@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Parent Preview" icon-name="custom:custom14">
+      <p class="slds-p-around_small">Click to open Modal Preview</p>
+      <lightning-button
+        class="slds-m-around_small"
+        variant="brand"
+        label="Show Modal"
+        onclick={handleOpenModal}
+      >
+      </lightning-button>
+      <lightning-button
+        class="slds-m-around_small"
+        variant="outline"
+        label="Close Preview"
+        onclick={handleClosePreview}
+      ></lightning-button>
+      <template if:true={isModalOpened}>
+        <c-preview-modal
+          onclosemodal={handleCloseModal}
+          onclosebothmycomps={handleCloseBoth}
+        ></c-preview-modal>
+      </template>
+    </lightning-card>
+  </template>

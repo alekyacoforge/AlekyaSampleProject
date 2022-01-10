@@ -1,0 +1,6 @@
+<aura:component description="LWCConsoleWrapper" implements="force:hasRecordId,force:lightningQuickAction">
+   <aura:handler name="init" value="{! this }" action="{! c.onInit }"/>
+
+   <lightning:workspaceAPI aura:id="workspaceAPI" />
+   <c:exampleLWC recordId="{! v.recordId }" onsubtab="{! c.handleOpenSubTab }" />
+</aura:component>

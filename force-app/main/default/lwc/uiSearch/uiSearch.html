@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="Search Contacts">
+        <div class="slds-m-around_x-small slds-grid">
+            <lightning-input type="text" class="slds-p-around_medium searchbox" placeholder="Search with contact name"
+                style="width: 80%;"></lightning-input>
+            <button class="slds-button slds-button_brand slds-m-top_x-large slds-m-bottom_medium"
+                onclick={handleSearch}>
+                <lightning-button-icon icon-name="utility:search" variant="bare-inverse" alternative-text="Search"
+                    icon-class="slds-m-around_x-small">
+                </lightning-button-icon>
+                <span title="Search">Search</span>
+            </button>
+        </div>
+    </lightning-card>
+    <div class="slds-grid slds-wrap slds-p-around_medium">
+        <template for:each={listOfContacts} for:item="contact">
+            <lightning-card title={contact.Name} key={contact.Id} class="slds-p-around_medium slds-size_1-of-4"
+                icon-name="standard:contact">
+                <lightning-input label="FirstName" name="FirstName" value={contact.FirstName}
+                    class="slds-p-around_x-small">
+                </lightning-input>
+                <lightning-input label="LastName" name="LastName" value={contact.LastName}
+                    class="slds-p-around_x-small">
+                </lightning-input>
+                <lightning-input label="Phone" name="Phone" value={contact.Phone} class="slds-p-around_x-small">
+                </lightning-input>
+                <lightning-input label="Email" name="Email" value={contact.Email} class="slds-p-around_x-small">
+                </lightning-input>
+                <lightning-combobox label="Level" name="Level__c" value={contact.Level__c} options={levelOptions}
+                    class="slds-p-around_x-small"></lightning-combobox>
+                <button value={contact.Id} class="slds-button slds-button_outline-brand slds-m-around_x-small"
+                    onclick={handleUpdate}>
+                    <lightning-button-icon icon-name="utility:save" variant="container" alternative-text="Update"
+                        icon-class="slds-m-around_x-small">
+                    </lightning-button-icon>
+                    <span title="Update">Update</span>
+                </button>
+                <button value={contact.Id} class="slds-button slds-button_destructive slds-m-around_x-small"
+                    onclick={handleDelete}>
+                    <lightning-button-icon icon-name="utility:delete" variant="bare-inverse" alternative-text="Delete"
+                        icon-class="slds-m-around_x-small">
+                    </lightning-button-icon>
+                    <span title="Delete">Delete</span>
+                </button>
+            </lightning-card>
+        </template>
+    </div>
+</template>

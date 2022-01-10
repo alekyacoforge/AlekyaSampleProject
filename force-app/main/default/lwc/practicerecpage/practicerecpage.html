@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="custom Toast">
+        <div class="slds-form-element slds-p-around_medium">
+            <label class="slds-form-element__label" for="title">Title</label>
+            <div class="slds-form-element__control">
+                <input type="text" name="form-title" placeholder="Enter custom title" class="slds-input"
+                    onkeyup={handleToastContent} />
+            </div>
+
+            <label class="slds-form-element__label" for="title">Message</label>
+            <div class="slds-form-element__control">
+                <input type="text" name="form-message" placeholder="Enter custom message" class="slds-input"
+                    onkeyup={handleToastContent} />
+            </div>
+            <div class="slds-form-element__control">
+                <lightning-combobox
+            name="form-variant-type"
+            label="Variant Type"
+            value={variantDefaultValue}
+            placeholder="Select Progress"
+            options={variantOptions}
+            onchange={handleToastContent}></lightning-combobox>
+            </div>
+            <div class="slds-form-element__control">
+                <lightning-combobox
+            name="form-mode-type"
+            label="Mode Type"
+            value={modeDefaultValue}
+            placeholder="Select Progress"
+            options={modeOptions}
+            onchange={handleToastContent}></lightning-combobox>
+            </div>
+            <div class="slds-form-element__control">
+                <button class="slds=button slds-button_neutral slds-var-m-around_medium" onclick={handleShowToast} >Show Toast </button>
+            </div>
+            </div>
+    </lightning-card>
+
+</template>

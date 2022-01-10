@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="External JS" icon-name="custom:custom32">
+        <div class="slds-p-around_medium"
+        for:each={elements}
+        for:item="e1"
+        key={index}>
+    <p>{e1}</p></div>
+    <div class="slds-p-around_medium"
+        for:each={moreElements}
+        for:item="e1"
+        key={index}>
+    <p>{e1}</p></div>
+    </lightning-card>
+</template>

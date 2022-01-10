@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Date Validation" icon-name=custom:custom43>
+        <div class="slds-grid slds-p-around_medium">
+            <lightning-input type="Date" name="startDate" 
+            class="slds-size_1-of-3 slds-m-horizontal_small" labe="Start Date" onchange={handleDateChange}>
+            </lightning-input>
+        </div>
+        <p if:true={dateError} class="slds-var-m-horizontal_medium" style="color: red">
+            {errorMessage}
+        </p>
+    </lightning-card>
+</template>

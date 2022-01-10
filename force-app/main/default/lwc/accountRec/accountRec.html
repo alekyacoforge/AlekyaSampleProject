@@ -1,0 +1,25 @@
+<template>
+    <div class="slds-m-around_medium">
+
+        <div class="slds-m-bottom_small">
+            <lightning-input type="text" value={searchValue} label="Account Name" onchange={searchKeyword}>
+            </lightning-input>
+             
+    
+        <lightning-button label="Search" onclick={handleSearchKeyword} variant="brand"></lightning-button>
+    </div>
+</div>
+
+    
+
+    <lightning-datatable key-field="Id" data={wireAccount} columns={columns} onsave={handleSave}
+        draft-values={saveDraftValues} onrowselection={getSelectedIdAction} >
+    </lightning-datatable>
+
+    <div slot="footer">
+        <lightning-button title="Delete" label="Delete Selected Row" size="small" variant="brand"
+            icon-name="utility:delete" icon-position="right" onclick={deleteAccountRowAction}></lightning-button>
+    </div>
+
+  
+</template>

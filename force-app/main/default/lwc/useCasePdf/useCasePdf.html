@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="LWC PDF" icon-name="custom:custom4">
+      <lightning-input-rich-text
+        class="slds-m-around_small"
+        onchange={handleText}
+        placeholder="Enter some text..."
+        value={textValue}
+        formats={allowedFormats}
+      ></lightning-input-rich-text>
+      <lightning-button
+        class="slds-m-around_small"
+        label="Save PDF Attachment"
+        onclick={saveAsPdf}
+        variant="brand"
+      >
+      </lightning-button>
+    </lightning-card>
+  </template>

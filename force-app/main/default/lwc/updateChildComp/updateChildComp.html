@@ -1,0 +1,26 @@
+<template>
+    <template if:true={disResult}>
+    <lightning-card>
+        <lightning-record-view-form
+        record-id={valFromParent}
+        object-api-name="Account">
+    <div class="slds-box slds-theme_default">
+    <lightning-output-field field-name="Name">
+    </lightning-output-field>
+    <lightning-output-field field-name="AccountNumber">
+    </lightning-output-field>
+    <lightning-output-field field-name="Phone">
+    </lightning-output-field>
+    <lightning-output-field field-name="Website">
+    </lightning-output-field>
+    
+</div>
+
+</lightning-record-view-form>
+<div class="slds-p-around_medium lgc-bg">
+    <lightning-input type="text" label="Update Phone Number" ></lightning-input>
+    <lightning-button variant="brand" label="Update Number"  onclick={updatePhone} class="slds-m-left_x-small"></lightning-button>
+</div>
+    </lightning-card>
+</template>
+</template>

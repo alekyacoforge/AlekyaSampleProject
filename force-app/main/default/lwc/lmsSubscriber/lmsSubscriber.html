@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="LMS Subscribers" icon-name="custom:custom32">
+      <lightning-button
+        variant="outine"
+        label="Show Data"
+        class="slds-m-around_medium"
+        onclick={handleShow}
+      >
+      </lightning-button>
+      <template if:true={showData}>
+        <div class="slds-p-around_medium">
+          <p>
+            <lightning-formatted-text value={name}></lightning-formatted-text>
+          </p>
+          <p>
+            <lightning-formatted-phone value={phone}></lightning-formatted-phone>
+          </p>
+          <p>
+            <lightning-formatted-text value={source}></lightning-formatted-text>
+          </p>
+          <p>{receivedMessage}</p>
+        </div>
+      </template>
+    </lightning-card>
+  </template>
