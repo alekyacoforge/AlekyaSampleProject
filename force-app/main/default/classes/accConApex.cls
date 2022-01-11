@@ -6,6 +6,7 @@ public with sharing class accConApex {
     @AuraEnabled(cacheable=true)
     public static List<Account> retrieveAccountRecords(){
         List<Account> accList = [Select Id, Name, Phone, Industry, Description From Account Where Phone != null limit 6];
+        console.log('HELLO');
         return accList;
     }
  
