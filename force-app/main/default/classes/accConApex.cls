@@ -13,6 +13,7 @@ public with sharing class accConApex {
  
     @AuraEnabled(cacheable=true)
     public static List<Contact> retrieveContactRecords(string accId){
+      console.log('HELLO');
       List<Contact> conObj = new  List<Contact>();
       List<Contact> conList = [Select Id, FirstName, LastName, Email, Phone, AccountId From Contact Where AccountId=:accId];
       for(Contact con:conList){
